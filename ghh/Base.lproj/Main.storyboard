@@ -1,44 +1,282 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Etm-Gk-prR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="1Es-0h-klQ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ghh" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tabBarController id="Etm-Gk-prR" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="cUA-T3-kdb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.84420692399999997" green="0.77984890799999995" blue="0.91601306199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ncB-Yd-SLQ" kind="relationship" relationship="viewControllers" id="kuL-Dr-Ct1"/>
+                        <segue destination="SLv-o6-Taw" kind="relationship" relationship="viewControllers" id="KVu-P7-9m9"/>
+                        <segue destination="j0m-rD-n95" kind="relationship" relationship="viewControllers" id="zmN-gL-xal"/>
+                        <segue destination="iMN-3e-IsD" kind="relationship" relationship="viewControllers" id="uPi-Kg-1iJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTP-Z1-nO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-957" y="1227"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="HWC-Gd-oJW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jD2-DW-EVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="SLv-o6-Taw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tips" id="NsR-gQ-M9T">
+                        <imageReference key="image" image="books.vertical.circle" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="books.vertical.circle" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OZy-DK-I6V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.84420692403759034" green="0.77984890800836815" blue="0.91601306200027466" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fuT-W2-KSH" kind="relationship" relationship="rootViewController" id="3YY-Q1-40E"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1677" y="1927"/>
+        </scene>
+        <!--Negotiation Tips-->
+        <scene sceneID="t2d-ja-RCZ">
+            <objects>
+                <viewController id="fuT-W2-KSH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tJE-cg-4nF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="dmM-Wk-94G">
-                                <rect key="frame" x="-21" y="0.0" width="456" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-K4-xaN">
-                                <rect key="frame" x="44" y="350" width="327" height="197"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oppositegradient" id="2vJ-Ly-MMM">
+                                <rect key="frame" x="-55" y="-86" width="525" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="pUf-IX-KaH"/>
+                        <color key="backgroundColor" red="0.111012679" green="0.2177260073" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Negotiation Tips" id="12T-Pk-4d1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhY-iU-tPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="-1678" y="2628"/>
+        </scene>
+        <!--Motivation-->
+        <scene sceneID="Wxf-sn-8sg">
+            <objects>
+                <viewController id="1R9-IC-30e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vg-CG-Lms">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oppositegradient" id="arC-gc-jfw">
+                                <rect key="frame" x="-55" y="-86" width="525" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b6y-K9-War"/>
+                        <color key="backgroundColor" red="1" green="0.76473191322908685" blue="0.56429407463132697" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Motivation" id="PBp-bE-OKp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdh-jf-pzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959" y="2628"/>
+        </scene>
+        <!--Practice!-->
+        <scene sceneID="4cY-L2-81U">
+            <objects>
+                <viewController id="uPt-JX-DdT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2SC-Wp-l6p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oppositegradient" id="L1S-ZD-0it">
+                                <rect key="frame" x="-55" y="-86" width="525" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YSS-bt-76y"/>
+                        <color key="backgroundColor" red="1" green="0.56234538952967306" blue="0.076503760598112924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Practice!" id="mGB-ww-esg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGp-5h-4sc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="2628"/>
+        </scene>
+        <!--Motivation-->
+        <scene sceneID="DmK-Bd-uIa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22c-k4-byI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="j0m-rD-n95" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Motivation" id="v8Y-Jq-oAn">
+                        <imageReference key="image" image="star.bubble" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="star.bubble" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3cx-vV-47b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.84420692399999997" green="0.77984890799999995" blue="0.91601306199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1R9-IC-30e" kind="relationship" relationship="rootViewController" id="ams-oW-uuN"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-958" y="1927"/>
+        </scene>
+        <!--Practice-->
+        <scene sceneID="oxP-zh-z1b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6m-b7-4Kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="iMN-3e-IsD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Practice" id="gGa-Qz-gvJ">
+                        <imageReference key="image" image="message" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="message" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="otV-YA-Vz7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.84420692399999997" green="0.77984890799999995" blue="0.91601306199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uPt-JX-DdT" kind="relationship" relationship="rootViewController" id="W7W-e6-B1c"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-235" y="1927"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="PKW-J9-6lz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBr-Qx-eAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="ncB-Yd-SLQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="9Ii-6M-X6y">
+                        <imageReference key="image" image="homekit" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.111012679" green="0.2177260073" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.7647319132" blue="0.56429407460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="1" green="0.56234538950000001" blue="0.076503760599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="myt-Ob-gFA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.84420692399999997" green="0.77984890799999995" blue="0.91601306199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IUN-ek-VRM" kind="relationship" relationship="rootViewController" id="6R9-OI-Iz3"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-2468" y="1927"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="2aN-Hf-0w3">
+            <objects>
+                <viewController id="IUN-ek-VRM" customClass="ViewController" customModule="ghh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="if8-ay-pEz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" id="zR3-gK-wad">
+                                <rect key="frame" x="-56" y="-107" width="525" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="Qgl-mT-ehS">
+                                <rect key="frame" x="43" y="264" width="327" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dJd-f8-ofU"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="xc8-xt-RxF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xie-AZ-BQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2468.1159420289855" y="2627.0089285714284"/>
         </scene>
     </scenes>
     <resources>
+        <image name="books.vertical.circle" catalog="system" width="128" height="121"/>
         <image name="gradient" width="678" height="1394"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="logo" width="2048" height="1330"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="oppositegradient" width="674" height="1394"/>
+        <image name="star.bubble" catalog="system" width="128" height="110"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
